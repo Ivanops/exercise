@@ -1,0 +1,5 @@
+# exercise
+
+npm install 
+
+grunt
