@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Truextend</title>
+    <meta charset="utf-8">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- bower:js -->
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="libs/angular-animate/angular-animate.js"></script>
+    <script src="libs/angular-resource/angular-resource.js"></script>
+    <!-- endbower -->
+    
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/services/users.service.js"></script>
+    <script src="app/services/pagination.service.js"></script>
+    <script src="app/layout/layout.controller.js"></script>
+    <script src="app/layout/layout.component.js"></script>
+    <script src="app/users/users.controller.js"></script>
+    <script src="app/repos/repos.controller.js"></script>
+</head>
+<body data-ng-app="app">
+    <layout-component></layout-component>
+    <div data-ng-view class="container-fluid"></div>
+</body>
+</html>

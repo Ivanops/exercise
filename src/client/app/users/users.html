@@ -1,0 +1,16 @@
+<!--Users html-->
+<div class="row"> 
+  <div class=" col-xs-12 col-sm-3" ng-repeat="user in vm.users">
+    <div class="w3-panel w3-card-4 text-center" style="padding:10px;">
+      <img ng-src="{{user.avatar_url ? user.avatar_url : 'images/person.png'}}" width="200" height="200" alt="Avatar" class="img-circle">
+      <h2>{{user.login}}</h2>
+      <a href="{{user.html_url}}" target="_blank" class="btn btn-primary">My Page</a>
+      <a href="/repo" ng-click="vm.getRepos(user.repos_url)" class="btn btn-primary">Repos Url</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-5"></div>
+  <button class="col-xs-12 col-sm-2 btn btn-primary text-center" type="button" ng-click="vm.getMoreUsers()">Load More</button>
+  <div class="col-sm-5"></div>
+</div>

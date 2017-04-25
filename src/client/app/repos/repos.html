@@ -1,0 +1,31 @@
+<!--Repos html-->
+
+<div class="row">
+  <h2>Link to repos: {{vm.url}}</h2>
+</div>
+<div class="row">
+  <nav aria-label="...">
+  <ul class="pagination">
+    <li ng-repeat="page in vm.pages" ng-click="vm.clickPagination(page.number)" class="{{page.isActive}}"><a href="/repo">{{page.number}} <span class="sr-only">(current)</span></a></li>
+  </ul>
+</nav>
+</div>
+<div class="row"> 
+  <div class=" col-xs-12 col-sm-3" ng-repeat="repo in vm.repos">
+    <div class="w3-panel w3-card-4 text-center" style="padding:10px; height:300px;">
+      <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">GitHub</a>
+      <h4>{{repo.name}}</h4>
+      <h6>{{repo.description}}</h6>
+      <h6>Issues: {{repo.open_issues_count}}</h6>
+      <h6>Open Issues: {{repo.open_issues}}</h6>
+      <h6>Forks: {{repo.forks_count}}</h6>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <nav aria-label="...">
+  <ul class="pagination">
+    <li ng-repeat="page in vm.pages" ng-click="vm.clickPagination(page.number)" class="{{page.isActive}}"><a href="/repo">{{page.number}} <span class="sr-only">(current)</span></a></li>
+  </ul>
+</nav>
+</div>
